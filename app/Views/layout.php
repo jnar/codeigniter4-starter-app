@@ -14,10 +14,10 @@
     <!-- Ionicons -->
     <link rel="stylesheet" href="<?= base_url('bower_components/Ionicons/css/ionicons.min.css'); ?>">
     <!-- Theme style -->
-    <link rel="stylesheet" href="<?= base_url('dist/css/AdminLTE.min.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/AdminLTE.min.css'); ?>">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="<?= base_url('dist/css/skins/_all-skins.min.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/skins/_all-skins.min.css'); ?>">
     <?= $this->renderSection('pageStyles') ?>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -70,7 +70,7 @@
                                             <!-- start message -->
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="<?= base_url('dist/img/user2-160x160.jpg'); ?>" class="img-circle" alt="User Image">
+                                                    <img src="<?= base_url('assets/img/user2-160x160.jpg'); ?>" class="img-circle" alt="User Image">
                                                 </div>
                                                 <h4>
                                                     Support Team
@@ -142,13 +142,13 @@
                         <!-- User Account: style can be found in dropdown.less -->
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img src="<?= base_url('dist/img/user2-160x160.jpg'); ?>" class="user-image" alt="User Image">
+                                <img src="<?= base_url('assets/img/user2-160x160.jpg'); ?>" class="user-image" alt="User Image">
                                 <span class="hidden-xs">Alexander Pierce</span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header">
-                                    <img src="<?= base_url('dist/img/user2-160x160.jpg'); ?>" class="img-circle" alt="User Image">
+                                    <img src="<?= base_url('assets/img/user2-160x160.jpg'); ?>" class="img-circle" alt="User Image">
 
                                     <p>
                                         Alexander Pierce - Web Developer
@@ -199,7 +199,7 @@
                 <!-- Sidebar user panel -->
                 <div class="user-panel">
                     <div class="pull-left image">
-                        <img src="<?= base_url('dist/img/user2-160x160.jpg'); ?>" class="img-circle" alt="User Image">
+                        <img src="<?= base_url('assets/img/user2-160x160.jpg'); ?>" class="img-circle" alt="User Image">
                     </div>
                     <div class="pull-left info">
                         <p>Alexander Pierce</p>
@@ -500,10 +500,10 @@
     <!-- FastClick -->
     <script src="<?= base_url('bower_components/fastclick/lib/fastclick.js'); ?>"></script>
     <!-- AdminLTE App -->
-    <script src="<?= base_url('dist/js/adminlte.min.js'); ?>"></script>
+    <script src="<?= base_url('assets/js/adminlte.min.js'); ?>"></script>
     <?= $this->renderSection('pageScripts') ?>
     <!-- AdminLTE for demo purposes -->
-    <script src="<?= base_url('dist/js/demo.js'); ?>"></script>
+    <script src="<?= base_url('assets/js/demo.js'); ?>"></script>
     <script>
         $(document).ready(function() {
             $('.sidebar-menu').tree()
