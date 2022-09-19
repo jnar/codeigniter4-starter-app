@@ -3,7 +3,7 @@
 Aplicación base con todo lo necesario para iniciar un desarrollo con CodeIgniter 4, encontrará lo siguiente en el repo:
 
 - [Codeigniter 4.2.6](https://codeigniter.com/download)  (Última versión a la fecha).
-- Itegración completa de [CodeIgniter shield](https://github.com/codeigniter4/shield) con vistas personalizadas, codeigniter shield es un framework de autenticación y registro de usuarios nativo de CodeIgniter.
+- Integración completa de [CodeIgniter shield](https://github.com/codeigniter4/shield) con vistas personalizadas, codeigniter shield es un framework de autenticación y registro de usuarios nativo de CodeIgniter.
 - Plantilla de admin [AdminLTE 2](https://github.com/ColorlibHQ/AdminLTE/releases/tag/v2.4.18) que a su vez viene con las versones de bootstrap, jquery y fontawesome compatibles.
 -  Módulo de clientes (datos básicos) con CRUD completo que le sirve de guía para hacer sus módulos.
 
@@ -21,7 +21,7 @@ app/views/clientes/nuevo.php
 - Cree una base de datos MySQL.
 - Importe en mysql el archivo **db/starterci4.sql**.
 - Edite el archivo **.env** personalizando las variables **app.baseURL** y las de **database**.
-- Abra la app por el navegador y registre un usuario nuevo en **http://[su_servidor]/retister**. Por ejemplo si su servidor carga en "localhost" y el folder se llama "ci4starter" el enlace sería "*http://localhost/ci4starter/register*"
+- Abra la app por el navegador y registre un usuario nuevo en **http://[su_servidor]/register**. Por ejemplo si su servidor carga en "localhost" y el folder se llama "ci4starter" el enlace sería "*http://localhost/ci4starter/register*"
 
 ## Notas
 
@@ -52,8 +52,8 @@ Mi nombre es Johan Naranjo, soy un desarrollador colombiano con amplia experienc
 
 # Screenshots
 
-![Imgur](https://imgur.com/8ztZZGd)
+![login](/ss/login.png)
 
-![Dashboard](https://imgur.com/RPItgqJ)
+![Dashboard](/ss/dashboard.png)
 
-![crud](https://imgur.com/vhRKnsk)
+![crud](/ss/crud.png)
