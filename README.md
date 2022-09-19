@@ -23,6 +23,20 @@ app/views/clientes/nuevo.php
 - Edite el archivo **env** cambiando el nombre a **.env** y personalizando las variables **app.baseURL** y las de **database**.
 - Abra la app por el navegador y registre un usuario nuevo en **http://[su_servidor]/public/index.php/register**. Por ejemplo si su servidor carga en "localhost" y el folder se llama "ci4-starter" el enlace sería "*http://localhost/ci4-starter/public/index.php/register*"
 
+## Requisitos
+Los requisitos de funcionamiento de CodeIgniter son los siguientes:
+
+PHP version 7.4 o superior, con las siguienes extenxiones habilitadas:
+
+- intl
+- libcurl (si planea utilizar la librería HTTP\CURLRequest)
+- mbstring
+
+Adicionalmente, asegúrese de que las siguientes extenciones están habilitadas en su PHP:
+- json (habilitada por defecto - NO la desactive)
+- xml (habilitada por defecto - NO la desactive))
+- mysqlnd
+
 ## Notas
 
 En la configuración de codeigniter shield se deshabilitaron los validators para que no fuera tan tedioso el registro de los usuarios si usted lo desea (y se lo recomiendo) puede activar los validators que necesite para fortalecer las contraseñas en su app, en el siquiente archivo:
