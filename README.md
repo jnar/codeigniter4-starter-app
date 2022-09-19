@@ -52,8 +52,8 @@ Mi nombre es Johan Naranjo, soy un desarrollador colombiano con amplia experienc
 
 # Screenshots
 
-![Imgur](https://imgur.com/8ztZZGd)
+![login](/ss/login.png)
 
-![Dashboard](https://imgur.com/RPItgqJ)
+![Dashboard](/ss/dashboard.png)
 
-![crud](https://imgur.com/vhRKnsk)
+![crud](/ss/crud.png)
