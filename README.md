@@ -21,7 +21,7 @@ app/views/clientes/nuevo.php
 - Cree una base de datos MySQL.
 - Importe en mysql el archivo **db/starterci4.sql**.
 - Edite el archivo **.env** personalizando las variables **app.baseURL** y las de **database**.
-- Abra la app por el navegador y registre un usuario nuevo en **http://[su_servidor]/retister**. Por ejemplo si su servidor carga en "localhost" y el folder se llama "ci4starter" el enlace sería "*http://localhost/ci4starter/register*"
+- Abra la app por el navegador y registre un usuario nuevo en **http://[su_servidor]/register**. Por ejemplo si su servidor carga en "localhost" y el folder se llama "ci4starter" el enlace sería "*http://localhost/ci4starter/register*"
 
 ## Notas
 
