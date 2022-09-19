@@ -20,7 +20,7 @@ CI_ENVIRONMENT = development
 # APP
 #--------------------------------------------------------------------
 
-app.baseURL = ''
+app.baseURL = 'http://localhost/ci4-starter/public/'
 # If you have trouble with `.`, you could also use `_`.
 # app_baseURL = ''
 # app.forceGlobalSecureRequests = false
@@ -40,9 +40,8 @@ app.baseURL = ''
 #--------------------------------------------------------------------
 
 database.default.hostname = localhost
-database.default.database = 
-database.default.username = 
-
+database.default.database = ci4starter
+database.default.username = root
 database.default.password =
 database.default.DBDriver = MySQLi
 database.default.DBPrefix =
