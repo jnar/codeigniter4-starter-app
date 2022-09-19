@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Config;
 
 use CodeIgniter\Shield\Config\Auth as ShieldAuth;
@@ -20,17 +22,15 @@ class Auth extends ShieldAuth
     public array $views = [
         'login'                       => '\App\Views\Auth\login',
         'register'                    => '\App\Views\Auth\register',
-        'forgotPassword'              => '\App\Views\Auth\forgot_password',
-        'resetPassword'               => '\App\Views\Auth\reset_password',
         'layout'                      => '\App\Views\Auth\layout',
         'action_email_2fa'            => '\App\Views\Auth\email_2fa_show',
         'action_email_2fa_verify'     => '\App\Views\Auth\email_2fa_verify',
-        'action_email_2fa_email'      => '\App\Views\Auth\email_2fa_email',
-        'action_email_activate_email' => '\App\Views\Auth\email_activate_email',
+        'action_email_2fa_email'      => '\App\Views\Auth\Email\email_2fa_email',
         'action_email_activate_show'  => '\App\Views\Auth\email_activate_show',
+        'action_email_activate_email' => '\App\Views\Auth\Email\email_activate_email',
         'magic-link-login'            => '\App\Views\Auth\magic_link_form',
         'magic-link-message'          => '\App\Views\Auth\magic_link_message',
-        'magic-link-email'            => '\App\Views\Auth\magic_link_email',
+        'magic-link-email'            => '\App\Views\Auth\Email\magic_link_email',
     ];
 
     /**
@@ -54,15 +54,17 @@ class Auth extends ShieldAuth
      * Specifies the class that represents an action to take after
      * the user logs in or registers a new account at the site.
      *
+     * You must register actions in the order of the actions to be performed.
+     *
      * Available actions with Shield:
-     * - login:    CodeIgniter\Shield\Authentication\Actions\Email2FA
-     * - register: CodeIgniter\Shield\Authentication\Actions\EmailActivator
+     * - register: 'CodeIgniter\Shield\Authentication\Actions\EmailActivator'
+     * - login:    'CodeIgniter\Shield\Authentication\Actions\Email2FA'
      *
      * @var array<string, class-string<ActionInterface>|null>
      */
     public array $actions = [
-        'login'    => null,
         'register' => null,
+        'login'    => null,
     ];
 
     /**
@@ -210,7 +212,7 @@ class Auth extends ShieldAuth
         //'CodeIgniter\Shield\Authentication\Passwords\CompositionValidator',
         //'CodeIgniter\Shield\Authentication\Passwords\NothingPersonalValidator',
         //'CodeIgniter\Shield\Authentication\Passwords\DictionaryValidator',
-        //'CodeIgniter\Shield\Authentication\Passwords\PwnedValidator',
+        // 'CodeIgniter\Shield\Authentication\Passwords\PwnedValidator',
     ];
 
     /**

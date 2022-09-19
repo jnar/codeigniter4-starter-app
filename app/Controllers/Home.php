@@ -6,6 +6,9 @@ class Home extends BaseController
 {
     public function index()
     {
-        return view('demo');
+        if (!auth()->loggedIn()) {
+            return redirect()->to(base_url('login'));
+        }
+        return view('dashboard');
     }
 }

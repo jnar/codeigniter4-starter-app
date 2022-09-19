@@ -2,7 +2,6 @@
 
 namespace Config;
 
-use CodeIgniter\CodeIgniter;
 use CodeIgniter\Config\BaseConfig;
 use CodeIgniter\Filters\CSRF;
 use CodeIgniter\Filters\DebugToolbar;
@@ -24,7 +23,6 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
-        'auth'          => \App\Filters\Auth::class
     ];
 
     /**
@@ -35,7 +33,6 @@ class Filters extends BaseConfig
      */
     public $globals = [
         'before' => [
-            'auth' => ['except' => 'login'],
             // 'honeypot',
             // 'csrf',
             // 'invalidchars',

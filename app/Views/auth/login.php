@@ -4,68 +4,93 @@
 
 <?= $this->section('main') ?>
 
-    <div class="container d-flex justify-content-center p-5">
-        <div class="card col-12 col-md-5 shadow-sm">
-            <div class="card-body">
-                <h5 class="card-title mb-5"><?= lang('Auth.login') ?></h5>
+<body class="hold-transition login-page">
+    <div class="login-box">
+        <div class="login-logo">
+            <?= lang('Auth.login') ?>
+        </div>
+        <!-- /.login-logo -->
+        <div class="login-box-body">
+            <?php if (session('error') !== null) : ?>
+                <div class="alert alert-danger alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    <?= session('error') ?>
+                </div>
 
-                <?php if (session('error') !== null) : ?>
-                    <div class="alert alert-danger" role="alert"><?= session('error') ?></div>
-                <?php elseif (session('errors') !== null) : ?>
-                    <div class="alert alert-danger" role="alert">
-                        <?php if (is_array(session('errors'))) : ?>
-                            <?php foreach (session('errors') as $error) : ?>
-                                <?= $error ?>
-                                <br>
-                            <?php endforeach ?>
-                        <?php else : ?>
-                            <?= session('errors') ?>
-                        <?php endif ?>
-                    </div>
-                <?php endif ?>
+            <?php elseif (session('errors') !== null) : ?>
+                <div class="alert alert-danger alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    <?php if (is_array(session('errors'))) : ?>
+                        <?php foreach (session('errors') as $error) : ?>
+                            <?= $error ?>
+                            <br>
+                        <?php endforeach ?>
+                    <?php else : ?>
+                        <?= session('errors') ?>
+                    <?php endif ?>
+                </div>
+            <?php endif ?>
 
-                <?php if (session('message') !== null) : ?>
-                <div class="alert alert-success" role="alert"><?= session('message') ?></div>
-                <?php endif ?>
+            <?php if (session('message') !== null) : ?>
+                <div class="alert alert-success alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    <?= session('message') ?>
+                </div>
 
-                <form action="<?= url_to('login') ?>" method="post">
-                    <?= csrf_field() ?>
+            <?php endif ?>
 
-                    <!-- Email -->
-                    <div class="mb-2">
-                        <input type="email" class="form-control" name="email" inputmode="email" autocomplete="email" placeholder="<?= lang('Auth.email') ?>" value="<?= old('email') ?>" required />
-                    </div>
-
-                    <!-- Password -->
-                    <div class="mb-2">
-                        <input type="password" class="form-control" name="password" inputmode="text" autocomplete="current-password" placeholder="<?= lang('Auth.password') ?>" required />
-                    </div>
-
-                    <!-- Remember me -->
-                    <?php if (setting('Auth.sessionConfig')['allowRemembering']): ?>
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input type="checkbox" name="remember" class="form-check-input" <?php if (old('remember')): ?> checked<?php endif ?>>
-                                <?= lang('Auth.rememberMe') ?>
-                            </label>
+            <form action="<?= url_to('login') ?>" method="post">
+                <?= csrf_field() ?>
+                <div class="form-group has-feedback">
+                    <input type="email" class="form-control" name="email" inputmode="email" autocomplete="email" placeholder="Correo electrónico" value="<?= old('email') ?>" required />
+                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="password" class="form-control" name="password" inputmode="text" autocomplete="current-password" placeholder="<?= lang('Auth.password') ?>" required />
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+                <div class="row">
+                    <?php if (setting('Auth.sessionConfig')['allowRemembering']) : ?>
+                        <div class="col-xs-8">
+                            <div class="checkbox icheck">
+                                <label>
+                                    <input type="checkbox" name="remember" class="form-check-input" <?php if (old('remember')) : ?> checked<?php endif ?>>
+                                    Recordar mis datos
+                                </label>
+                            </div>
                         </div>
                     <?php endif; ?>
 
-                    <div class="d-grid col-12 col-md-8 mx-auto m-3">
+                    <!-- /.col -->
+                    <div class="col-xs-4">
                         <button type="submit" class="btn btn-primary btn-block"><?= lang('Auth.login') ?></button>
                     </div>
+                    <!-- /.col -->
+                </div>
+            </form>
+            <!-- /.social-auth-links -->
 
-                    <?php if (setting('Auth.allowMagicLinkLogins')) : ?>
-                        <p class="text-center"><?= lang('Auth.forgotPassword') ?> <a href="<?= url_to('magic-link') ?>"><?= lang('Auth.useMagicLink') ?></a></p>
-                    <?php endif ?>
+            <?php if (setting('Auth.allowMagicLinkLogins')) : ?>
+                <p class="text-center">Olvidaste tu password? <a href="<?= url_to('magic-link') ?>">Enviarme un enlace de login</a></p>
+            <?php endif ?>
 
-                    <?php if (setting('Auth.allowRegistration')) : ?>
-                        <p class="text-center"><?= lang('Auth.needAccount') ?> <a href="<?= url_to('register') ?>"><?= lang('Auth.register') ?></a></p>
-                    <?php endif ?>
-
-                </form>
-            </div>
+            <?php if (setting('Auth.allowRegistration')) : ?>
+                <p class="text-center">No estas registrado? <a href="<?= url_to('register') ?>"> Registrar</a></p>
+            <?php endif ?>
         </div>
+        <!-- /.login-box-body -->
     </div>
-
+    <!-- /.login-box -->
+    <!-- iCheck -->
+    <script src="<?= base_url('assets/plugins/iCheck/icheck.min.js'); ?>"></script>>
+    <script>
+        $(function() {
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_square-blue',
+                radioClass: 'iradio_square-blue',
+                increaseArea: '20%' /* optional */
+            });
+        });
+    </script>
+</body>
 <?= $this->endSection() ?>
