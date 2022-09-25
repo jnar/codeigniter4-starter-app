@@ -270,7 +270,7 @@
                             <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
                         </ul>
                     </li>
-                    <li><a href="https://adminlte.io/docs" target="_blank"><i class="fa fa-book"></i> <span>Documentación AdminLTE</span></a></li>
+                    <li><a href="https://adminlte.io/themes/AdminLTE/index2.html" target="_blank"><i class="fa fa-book"></i> <span>Documentación AdminLTE</span></a></li>
 
                 </ul>
             </section>
