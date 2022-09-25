@@ -4,7 +4,7 @@ Aplicación base con todo lo necesario para iniciar un desarrollo con CodeIgnite
 
 - [Codeigniter 4.2.6](https://codeigniter.com/download)  (Última versión a la fecha).
 - Integración completa de [CodeIgniter shield](https://github.com/codeigniter4/shield) con vistas personalizadas, codeigniter shield es un framework de autenticación y registro de usuarios nativo de CodeIgniter.
-- Plantilla de admin [AdminLTE 2](https://github.com/ColorlibHQ/AdminLTE/releases/tag/v2.4.18) que a su vez viene con las versones de bootstrap, jquery y fontawesome compatibles.
+- Plantilla de admin [AdminLTE 2](https://github.com/ColorlibHQ/AdminLTE/releases/tag/v2.4.18) que a su vez viene con las versiones de bootstrap, jquery y fontawesome compatibles.
 -  Módulo de clientes (datos básicos) con CRUD completo que le sirve de guía para hacer sus módulos.
 
 ```

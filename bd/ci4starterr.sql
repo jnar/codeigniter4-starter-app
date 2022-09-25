@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-08-2022 a las 04:32:44
+-- Tiempo de generación: 25-09-2022 a las 10:27:43
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -39,7 +39,7 @@ CREATE TABLE `auth_groups_users` (
 --
 
 INSERT INTO `auth_groups_users` (`id`, `user_id`, `group`, `created_at`) VALUES
-(1, 1, 'user', '2022-08-06 09:43:51');
+(3, 1, 'user', '2022-09-18 18:49:45');
 
 -- --------------------------------------------------------
 
@@ -67,7 +67,7 @@ CREATE TABLE `auth_identities` (
 --
 
 INSERT INTO `auth_identities` (`id`, `user_id`, `type`, `name`, `secret`, `secret2`, `expires`, `extra`, `force_reset`, `last_used_at`, `created_at`, `updated_at`) VALUES
-(1, 1, 'email_password', NULL, 'admin@admin.com', '$2y$10$mQTefVoFqZdjJ2uyewbg0.Jo72KOmHFvxaxMolXyhh6hVQ64gEGf.', NULL, NULL, 0, '2022-08-06 13:41:39', '2022-08-06 09:43:51', '2022-08-06 13:41:39');
+(1, 1, 'email_password', NULL, 'admin@admin.com', '$2y$10$Fl9eiDKq3OYAUE8GXGbYzeB37rnwBppVtb0HKvgWFTdULQ8U6iXWy', NULL, NULL, 0, '2022-09-25 02:17:14', '2022-09-18 18:49:45', '2022-09-25 02:17:14');
 
 -- --------------------------------------------------------
 
@@ -92,7 +92,16 @@ CREATE TABLE `auth_logins` (
 
 INSERT INTO `auth_logins` (`id`, `ip_address`, `user_agent`, `id_type`, `identifier`, `user_id`, `date`, `success`) VALUES
 (1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:103.0) Gecko/20100101 Firefox/103.0', 'email_password', 'admin@admin.com', 1, '2022-08-06 11:16:15', 1),
-(2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:103.0) Gecko/20100101 Firefox/103.0', 'email_password', 'admin@admin.com', 1, '2022-08-06 13:41:39', 1);
+(2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:103.0) Gecko/20100101 Firefox/103.0', 'email_password', 'admin@admin.com', 1, '2022-08-06 13:41:39', 1),
+(3, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:103.0) Gecko/20100101 Firefox/103.0', 'email_password', 'admin@admin.com', 1, '2022-08-07 22:52:14', 1),
+(4, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:103.0) Gecko/20100101 Firefox/103.0', 'email_password', 'admin@admin.com', 1, '2022-08-07 23:24:27', 1),
+(5, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:103.0) Gecko/20100101 Firefox/103.0', 'email_password', 'admin@admin.com', 1, '2022-08-07 23:58:55', 1),
+(6, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:104.0) Gecko/20100101 Firefox/104.0', 'email_password', 'admin@admin.com', NULL, '2022-09-18 17:12:52', 0),
+(7, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:104.0) Gecko/20100101 Firefox/104.0', 'email_password', 'admin@admin.com', 1, '2022-09-18 23:39:53', 1),
+(8, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:105.0) Gecko/20100101 Firefox/105.0', 'email_password', 'johannaranjo@gmail.com', NULL, '2022-09-25 01:58:56', 0),
+(9, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:105.0) Gecko/20100101 Firefox/105.0', 'email_password', 'johannaranjo@gmail.com', NULL, '2022-09-25 01:59:08', 0),
+(10, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:105.0) Gecko/20100101 Firefox/105.0', 'email_password', 'admin@admin.com', 1, '2022-09-25 02:00:00', 1),
+(11, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:105.0) Gecko/20100101 Firefox/105.0', 'email_password', 'admin@admin.com', 1, '2022-09-25 02:17:14', 1);
 
 -- --------------------------------------------------------
 
@@ -139,6 +148,23 @@ CREATE TABLE `auth_token_logins` (
   `date` datetime NOT NULL,
   `success` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `clientes`
+--
+
+CREATE TABLE `clientes` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(30) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `telefono` varchar(15) NOT NULL,
+  `activo` int(11) NOT NULL DEFAULT 1,
+  `f_create` timestamp NOT NULL DEFAULT current_timestamp(),
+  `f_update` timestamp NULL DEFAULT NULL,
+  `f_delete` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -205,7 +231,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `status`, `status_message`, `active`, `last_active`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'admin', NULL, NULL, 1, '2022-08-06 10:33:42', '2022-08-06 09:43:51', '2022-08-06 10:33:42', NULL);
+(1, 'admin', NULL, NULL, 1, NULL, '2022-09-18 18:49:45', '2022-09-18 18:49:45', NULL);
 
 --
 -- Índices para tablas volcadas
@@ -258,6 +284,12 @@ ALTER TABLE `auth_token_logins`
   ADD KEY `user_id` (`user_id`);
 
 --
+-- Indices de la tabla `clientes`
+--
+ALTER TABLE `clientes`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `migrations`
 --
 ALTER TABLE `migrations`
@@ -284,7 +316,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `auth_groups_users`
 --
 ALTER TABLE `auth_groups_users`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `auth_identities`
@@ -296,7 +328,7 @@ ALTER TABLE `auth_identities`
 -- AUTO_INCREMENT de la tabla `auth_logins`
 --
 ALTER TABLE `auth_logins`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `auth_permissions_users`
@@ -315,6 +347,12 @@ ALTER TABLE `auth_remember_tokens`
 --
 ALTER TABLE `auth_token_logins`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `clientes`
+--
+ALTER TABLE `clientes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `migrations`
