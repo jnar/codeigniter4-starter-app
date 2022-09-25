@@ -271,6 +271,7 @@
                         </ul>
                     </li>
                     <li><a href="https://adminlte.io/themes/AdminLTE/index2.html" target="_blank"><i class="fa fa-book"></i> <span>Documentación AdminLTE</span></a></li>
+                    <li><a href="https://codeigniter.com/user_guide/index.html" target="_blank"><i class="fa fa-book"></i> <span>Documentación CI4</span></a></li>
 
                 </ul>
             </section>
