@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-09-2022 a las 09:51:04
+-- Tiempo de generación: 30-09-2022 a las 18:41:38
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.0.19
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `ci4starter`
+-- Base de datos: `cistarter`
 --
 
 -- --------------------------------------------------------
@@ -33,13 +33,6 @@ CREATE TABLE `auth_groups_users` (
   `group` varchar(255) NOT NULL,
   `created_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Volcado de datos para la tabla `auth_groups_users`
---
-
-INSERT INTO `auth_groups_users` (`id`, `user_id`, `group`, `created_at`) VALUES
-(3, 1, 'user', '2022-09-18 18:49:45');
 
 -- --------------------------------------------------------
 
@@ -61,13 +54,6 @@ CREATE TABLE `auth_identities` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Volcado de datos para la tabla `auth_identities`
---
-
-INSERT INTO `auth_identities` (`id`, `user_id`, `type`, `name`, `secret`, `secret2`, `expires`, `extra`, `force_reset`, `last_used_at`, `created_at`, `updated_at`) VALUES
-(1, 1, 'email_password', NULL, 'admin@admin.com', '$2y$10$Fl9eiDKq3OYAUE8GXGbYzeB37rnwBppVtb0HKvgWFTdULQ8U6iXWy', NULL, NULL, 0, '2022-09-25 02:17:14', '2022-09-18 18:49:45', '2022-09-25 02:17:14');
 
 -- --------------------------------------------------------
 
@@ -225,13 +211,6 @@ CREATE TABLE `users` (
   `updated_at` datetime DEFAULT NULL,
   `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Volcado de datos para la tabla `users`
---
-
-INSERT INTO `users` (`id`, `username`, `status`, `status_message`, `active`, `last_active`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'admin', NULL, NULL, 1, NULL, '2022-09-18 18:49:45', '2022-09-18 18:49:45', NULL);
 
 --
 -- Índices para tablas volcadas
