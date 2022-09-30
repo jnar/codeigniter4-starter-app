@@ -1,0 +1,18 @@
+CRITICAL - 2022-09-22 14:03:24 --> Call to a member function routes() on null
+in APPPATH\Config\Routes.php on line 40.
+ 1 SYSTEMPATH\CodeIgniter.php(769): require()
+ 2 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-22 14:14:30 --> Call to a member function routes() on null
+in APPPATH\Config\Routes.php on line 40.
+ 1 SYSTEMPATH\CodeIgniter.php(769): require()
+ 2 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-22 14:15:17 --> Call to a member function routes() on null
+in APPPATH\Config\Routes.php on line 40.
+ 1 SYSTEMPATH\CodeIgniter.php(769): require()
+ 2 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

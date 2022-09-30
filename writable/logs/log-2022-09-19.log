@@ -1,0 +1,135 @@
+ERROR - 2022-09-19 10:44:58 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'ci4-starter' in D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'ci4-starter', 3306, '', 0)
+#1 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(163): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(41): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(NULL)
+#6 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', NULL)
+#7 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(21): CodeIgniter\Settings\Settings->get('Auth.sessionCon...')
+#8 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(643): setting('Auth.sessionCon...')
+#9 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(661): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(367): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+#11 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(351): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\shield\src\Auth.php(159): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\Johan\htdocs\ci4-starter\app\Controllers\Home.php(9): CodeIgniter\Shield\Auth->__call('loggedIn', Array)
+#14 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Home->index()
+#15 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#16 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#17 D:\Johan\htdocs\ci4-starter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#18 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'ci4-starter' in D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(163): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(41): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(NULL)
+#5 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', NULL)
+#6 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(21): CodeIgniter\Settings\Settings->get('Auth.sessionCon...')
+#7 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(643): setting('Auth.sessionCon...')
+#8 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(661): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#9 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(367): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+#10 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(351): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#11 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\shield\src\Auth.php(159): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#12 D:\Johan\htdocs\ci4-starter\app\Controllers\Home.php(9): CodeIgniter\Shield\Auth->__call('loggedIn', Array)
+#13 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Home->index()
+#14 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#15 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#16 D:\Johan\htdocs\ci4-starter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#17 {main}
+CRITICAL - 2022-09-19 10:44:58 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'ci4-starter'
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `settings`
+WHERE `context` IS NULL', [], false)
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(163): CodeIgniter\Database\BaseBuilder->get()
+ 4 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(41): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(null)
+ 5 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', null)
+ 6 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(21): CodeIgniter\Settings\Settings->get('Auth.sessionConfig')
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(643): setting('Auth.sessionConfig')
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(661): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(367): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+10 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(351): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+11 VENDORPATH\codeigniter4\shield\src\Auth.php(159): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+12 APPPATH\Controllers\Home.php(9): CodeIgniter\Shield\Auth->__call('loggedIn', [])
+13 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->index()
+14 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+15 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-19 10:45:02 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'ci4-starter' in D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'ci4-starter', 3306, '', 0)
+#1 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(163): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(41): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(NULL)
+#6 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', NULL)
+#7 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(21): CodeIgniter\Settings\Settings->get('Auth.sessionCon...')
+#8 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(643): setting('Auth.sessionCon...')
+#9 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(661): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(367): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+#11 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(351): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\shield\src\Auth.php(159): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\Johan\htdocs\ci4-starter\app\Controllers\Home.php(9): CodeIgniter\Shield\Auth->__call('loggedIn', Array)
+#14 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Home->index()
+#15 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#16 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#17 D:\Johan\htdocs\ci4-starter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#18 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'ci4-starter' in D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(163): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(41): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(NULL)
+#5 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', NULL)
+#6 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(21): CodeIgniter\Settings\Settings->get('Auth.sessionCon...')
+#7 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(643): setting('Auth.sessionCon...')
+#8 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(661): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#9 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(367): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+#10 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(351): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#11 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\shield\src\Auth.php(159): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#12 D:\Johan\htdocs\ci4-starter\app\Controllers\Home.php(9): CodeIgniter\Shield\Auth->__call('loggedIn', Array)
+#13 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Home->index()
+#14 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#15 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#16 D:\Johan\htdocs\ci4-starter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#17 {main}
+CRITICAL - 2022-09-19 10:45:02 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'ci4-starter'
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `settings`
+WHERE `context` IS NULL', [], false)
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(163): CodeIgniter\Database\BaseBuilder->get()
+ 4 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(41): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(null)
+ 5 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', null)
+ 6 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(21): CodeIgniter\Settings\Settings->get('Auth.sessionConfig')
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(643): setting('Auth.sessionConfig')
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(661): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(367): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+10 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(351): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+11 VENDORPATH\codeigniter4\shield\src\Auth.php(159): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+12 APPPATH\Controllers\Home.php(9): CodeIgniter\Shield\Auth->__call('loggedIn', [])
+13 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->index()
+14 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+15 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-19 19:49:11 --> Class "Locale" not found
+in SYSTEMPATH\CodeIgniter.php on line 181.
+ 1 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2022-09-19 19:49:51 --> Class "Locale" not found
+in SYSTEMPATH\CodeIgniter.php on line 181.
+ 1 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2022-09-19 19:49:54 --> Class "Locale" not found
+in SYSTEMPATH\CodeIgniter.php on line 181.
+ 1 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()

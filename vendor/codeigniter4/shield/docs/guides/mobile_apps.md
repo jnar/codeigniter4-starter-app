@@ -11,7 +11,7 @@ Start by creating a route that would handle the request from the login screen on
 ```php
 
 // Routes.php
-$route->post('auth/token', 'App\Controllers\Auth\LoginController::mobileLogin');
+$routes->post('auth/token', '\App\Controllers\Auth\LoginController::mobileLogin');
 
 // LoginController.php
 namespace App\Controllers\Auth;
@@ -44,7 +44,7 @@ class LoginController extends BaseController
         $result = auth()->attempt($this->request->getPost(setting('Auth.validFields')));
         if (! $result->isOK()) {
             return $this->response
-                ->setJSON(['error' => $result->reason])
+                ->setJSON(['error' => $result->reason()])
                 ->setStatusCode(401);
         }
 
@@ -58,3 +58,9 @@ class LoginController extends BaseController
 ```
 
 When making all future requests to the API, the mobile client should return the raw token in the `Authorization` header as a `Bearer` token.
+
+> **Note**
+>
+> By default, `$authenticatorHeader['tokens']` is set to `Authorization`. You can change the header name by setting the `$authenticatorHeader['tokens']` value in the `Auth.php` config file.
+>
+> e.g. if `$authenticatorHeader['tokens']` is set to `PersonalAccessCodes` then the mobile client should return the raw token in the `PersonalAccessCodes` header as a `Bearer` token.

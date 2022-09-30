@@ -46,7 +46,7 @@
         'codeigniter4/shield' => array(
             'pretty_version' => 'dev-develop',
             'version' => 'dev-develop',
-            'reference' => '94dc77354b9cf52ebbf9c986ec236bf58d705ee6',
+            'reference' => '321a5ca965f2be25e90d07163d560ecee5ad3e8b',
             'type' => 'library',
             'install_path' => __DIR__ . '/../codeigniter4/shield',
             'aliases' => array(
@@ -73,9 +73,9 @@
             'dev_requirement' => true,
         ),
         'kint-php/kint' => array(
-            'pretty_version' => '4.2.0',
-            'version' => '4.2.0.0',
-            'reference' => '0518ee9e1b5b3c7bbf3c9ad837a6591e39dbfab0',
+            'pretty_version' => '4.2.2',
+            'version' => '4.2.2.0',
+            'reference' => '9230c016c976ff446f0be5cf82272db278344f69',
             'type' => 'library',
             'install_path' => __DIR__ . '/../kint-php/kint',
             'aliases' => array(),
@@ -181,9 +181,9 @@
             'dev_requirement' => true,
         ),
         'phpunit/phpunit' => array(
-            'pretty_version' => '9.5.24',
-            'version' => '9.5.24.0',
-            'reference' => 'd0aa6097bef9fd42458a9b3c49da32c6ce6129c5',
+            'pretty_version' => '9.5.25',
+            'version' => '9.5.25.0',
+            'reference' => '3e6f90ca7e3d02025b1d147bd8d4a89fd4ca8a1d',
             'type' => 'library',
             'install_path' => __DIR__ . '/../phpunit/phpunit',
             'aliases' => array(),
@@ -352,9 +352,9 @@
             'dev_requirement' => true,
         ),
         'symfony/deprecation-contracts' => array(
-            'pretty_version' => 'v3.1.1',
-            'version' => '3.1.1.0',
-            'reference' => '07f1b9cc2ffee6aaafcf4b710fbc38ff736bd918',
+            'pretty_version' => 'v3.0.2',
+            'version' => '3.0.2.0',
+            'reference' => '26954b3d62a6c5fd0ea8a2a00c0353a14978d05c',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/deprecation-contracts',
             'aliases' => array(),

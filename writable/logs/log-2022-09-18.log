@@ -1,0 +1,247 @@
+CRITICAL - 2022-09-18 12:32:20 --> syntax error, unexpected token "/", expecting "]"
+in APPPATH\Config\Auth.php on line 214.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Config\\Auth.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Auth')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Auth')
+ 4 SYSTEMPATH\Config\Factories.php(152): class_exists('Config\\Auth')
+ 5 SYSTEMPATH\Config\Factories.php(122): CodeIgniter\Config\Factories::locateClass([...], 'Auth')
+ 6 SYSTEMPATH\Common.php(200): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 7 VENDORPATH\codeigniter4\shield\src\Config\Services.php(23): config('Auth')
+ 8 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Shield\Config\Services::auth(false)
+ 9 SYSTEMPATH\Config\BaseService.php(194): CodeIgniter\Config\BaseService::__callStatic('auth', [...])
+10 VENDORPATH\codeigniter4\shield\src\Config\Services.php(20): CodeIgniter\Config\BaseService::getSharedInstance('auth')
+11 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Shield\Config\Services::auth()
+12 SYSTEMPATH\Common.php(967): CodeIgniter\Config\BaseService::__callStatic('auth', [])
+13 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(51): service('auth')
+14 SYSTEMPATH\Debug\Toolbar.php(65): CodeIgniter\Shield\Collectors\Auth->__construct()
+15 SYSTEMPATH\Config\Services.php(714): CodeIgniter\Debug\Toolbar->__construct(Object(Config\Toolbar))
+16 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::toolbar(Object(Config\Toolbar), false)
+17 SYSTEMPATH\Config\BaseService.php(194): CodeIgniter\Config\BaseService::__callStatic('toolbar', [...])
+18 SYSTEMPATH\Config\Services.php(709): CodeIgniter\Config\BaseService::getSharedInstance('toolbar', null)
+19 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::toolbar()
+20 APPPATH\Config\Events.php(46): CodeIgniter\Config\BaseService::__callStatic('toolbar', [])
+21 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+22 SYSTEMPATH\CodeIgniter.php(317): CodeIgniter\Events\Events::trigger('pre_system')
+23 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-18 13:54:18 --> Invalid file: dasboard.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dasboard.php')
+ 2 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('dasboard', [], true)
+ 3 APPPATH\Controllers\Home.php(12): view('dasboard')
+ 4 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-18 13:54:37 --> Invalid file: dashboard.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard.php')
+ 2 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('dashboard', [], true)
+ 3 APPPATH\Controllers\Home.php(12): view('dashboard')
+ 4 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-18 13:54:40 --> Invalid file: dashboard.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard.php')
+ 2 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('dashboard', [], true)
+ 3 APPPATH\Controllers\Home.php(12): view('dashboard')
+ 4 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-18 15:21:06 --> mysqli_sql_exception: Table 'cistarter.clientes' doesn't exist in D:\Johan\htdocs\ci4starter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Johan\htdocs\ci4starter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Johan\htdocs\ci4starter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Johan\htdocs\ci4starter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Johan\htdocs\ci4starter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Johan\htdocs\ci4starter\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Johan\htdocs\ci4starter\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Johan\htdocs\ci4starter\app\Controllers\Clientes.php(19): CodeIgniter\BaseModel->findAll()
+#7 D:\Johan\htdocs\ci4starter\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Clientes->index()
+#8 D:\Johan\htdocs\ci4starter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+#9 D:\Johan\htdocs\ci4starter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Johan\htdocs\ci4starter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-09-18 15:21:06 --> Table 'cistarter.clientes' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `clientes`
+WHERE `activo` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `clientes`
+WHERE `activo` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `clientes`
+WHERE `activo` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clientes`
+WHERE `activo` = :activo:', [...], false)
+ 5 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Clientes.php(19): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Clientes->index()
+ 9 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-18 15:21:24 --> mysqli_sql_exception: Table 'cistarter.clientes' doesn't exist in D:\Johan\htdocs\ci4starter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Johan\htdocs\ci4starter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Johan\htdocs\ci4starter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Johan\htdocs\ci4starter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Johan\htdocs\ci4starter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Johan\htdocs\ci4starter\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Johan\htdocs\ci4starter\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Johan\htdocs\ci4starter\app\Controllers\Clientes.php(19): CodeIgniter\BaseModel->findAll()
+#7 D:\Johan\htdocs\ci4starter\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Clientes->index()
+#8 D:\Johan\htdocs\ci4starter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+#9 D:\Johan\htdocs\ci4starter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Johan\htdocs\ci4starter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-09-18 15:21:24 --> Table 'cistarter.clientes' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `clientes`
+WHERE `activo` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `clientes`
+WHERE `activo` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `clientes`
+WHERE `activo` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clientes`
+WHERE `activo` = :activo:', [...], false)
+ 5 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Clientes.php(19): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Clientes->index()
+ 9 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-18 15:22:41 --> Invalid file: clientes.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('clientes.php')
+ 2 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('clientes', [], true)
+ 3 APPPATH\Controllers\Clientes.php(21): view('clientes', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Clientes->index()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-18 15:31:11 --> Invalid file: header.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('header.php')
+ 2 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('header', [], true)
+ 3 APPPATH\Controllers\Clientes.php(28): view('header')
+ 4 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Clientes->nuevo()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-18 15:39:29 --> Undefined variable $clientes
+in APPPATH\Views\clientes\clientes.php on line 39.
+ 1 APPPATH\Views\clientes\clientes.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $clientes', 'APPPATH\\Views\\clientes\\clientes.php', 39)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\clientes\\clientes.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('clientes/clientes', [], true)
+ 5 APPPATH\Controllers\Clientes.php(21): view('clientes/clientes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Clientes->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-18 15:39:32 --> Undefined variable $clientes
+in APPPATH\Views\clientes\clientes.php on line 39.
+ 1 APPPATH\Views\clientes\clientes.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $clientes', 'APPPATH\\Views\\clientes\\clientes.php', 39)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\clientes\\clientes.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('clientes/clientes', [], true)
+ 5 APPPATH\Controllers\Clientes.php(21): view('clientes/clientes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Clientes->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-18 15:40:54 --> Undefined variable $datos
+in APPPATH\Views\clientes\clientes.php on line 100.
+ 1 APPPATH\Views\clientes\clientes.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datos', 'APPPATH\\Views\\clientes\\clientes.php', 100)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\clientes\\clientes.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('clientes/clientes', [], true)
+ 5 APPPATH\Controllers\Clientes.php(21): view('clientes/clientes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Clientes->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-18 16:27:01 --> Undefined variable $dato
+in APPPATH\Views\clientes\clientes.php on line 49.
+ 1 APPPATH\Views\clientes\clientes.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dato', 'APPPATH\\Views\\clientes\\clientes.php', 49)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\clientes\\clientes.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('clientes/clientes', [], true)
+ 5 APPPATH\Controllers\Clientes.php(21): view('clientes/clientes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Clientes->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-18 23:39:20 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(163): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(41): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(NULL)
+#6 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', NULL)
+#7 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(21): CodeIgniter\Settings\Settings->get('Auth.sessionCon...')
+#8 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(643): setting('Auth.sessionCon...')
+#9 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(661): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#10 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(367): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+#11 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(351): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#12 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\shield\src\Auth.php(159): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#13 D:\Johan\htdocs\ci4-starter\app\Controllers\Home.php(9): CodeIgniter\Shield\Auth->__call('loggedIn', Array)
+#14 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Home->index()
+#15 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#16 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#17 D:\Johan\htdocs\ci4-starter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#18 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(163): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(41): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(NULL)
+#5 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', NULL)
+#6 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(21): CodeIgniter\Settings\Settings->get('Auth.sessionCon...')
+#7 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(643): setting('Auth.sessionCon...')
+#8 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(661): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#9 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(367): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+#10 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(351): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#11 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\shield\src\Auth.php(159): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#12 D:\Johan\htdocs\ci4-starter\app\Controllers\Home.php(9): CodeIgniter\Shield\Auth->__call('loggedIn', Array)
+#13 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Home->index()
+#14 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#15 D:\Johan\htdocs\ci4-starter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#16 D:\Johan\htdocs\ci4-starter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#17 {main}
+CRITICAL - 2022-09-18 23:39:20 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `settings`
+WHERE `context` IS NULL', [], false)
+ 3 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(163): CodeIgniter\Database\BaseBuilder->get()
+ 4 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(41): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(null)
+ 5 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', null)
+ 6 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(21): CodeIgniter\Settings\Settings->get('Auth.sessionConfig')
+ 7 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(643): setting('Auth.sessionConfig')
+ 8 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(661): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 9 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(367): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+10 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(351): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+11 VENDORPATH\codeigniter4\shield\src\Auth.php(159): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+12 APPPATH\Controllers\Home.php(9): CodeIgniter\Shield\Auth->__call('loggedIn', [])
+13 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->index()
+14 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+15 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

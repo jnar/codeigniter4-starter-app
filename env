@@ -14,13 +14,13 @@
 # ENVIRONMENT
 #--------------------------------------------------------------------
 
-CI_ENVIRONMENT = development
+# CI_ENVIRONMENT = production
 
 #--------------------------------------------------------------------
 # APP
 #--------------------------------------------------------------------
 
-app.baseURL = ''
+# app.baseURL = ''
 # If you have trouble with `.`, you could also use `_`.
 # app_baseURL = ''
 # app.forceGlobalSecureRequests = false
@@ -39,13 +39,13 @@ app.baseURL = ''
 # DATABASE
 #--------------------------------------------------------------------
 
-database.default.hostname = localhost
-database.default.database = 
-database.default.username = 
-database.default.password =
-database.default.DBDriver = MySQLi
-database.default.DBPrefix =
-database.default.port = 3306  
+# database.default.hostname = localhost
+# database.default.database = ci4
+# database.default.username = root
+# database.default.password = root
+# database.default.DBDriver = MySQLi
+# database.default.DBPrefix =
+# database.default.port = 3306
 
 # database.tests.hostname = localhost
 # database.tests.database = ci4_test
@@ -117,15 +117,15 @@ database.default.port = 3306
 # SECURITY
 #--------------------------------------------------------------------
 
-security.csrfProtection = 'session'
-security.tokenRandomize = false
-security.tokenName = 'csrf_token_name'
-security.headerName = 'X-CSRF-TOKEN'
-security.cookieName = 'csrf_cookie_name'
-security.expires = 7200
-security.regenerate = true
-security.redirect = true
-security.samesite = 'Lax'
+# security.csrfProtection = 'cookie'
+# security.tokenRandomize = false
+# security.tokenName = 'csrf_token_name'
+# security.headerName = 'X-CSRF-TOKEN'
+# security.cookieName = 'csrf_cookie_name'
+# security.expires = 7200
+# security.regenerate = true
+# security.redirect = true
+# security.samesite = 'Lax'
 
 #--------------------------------------------------------------------
 # LOGGER
