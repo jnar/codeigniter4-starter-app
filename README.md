@@ -14,9 +14,22 @@ app/views/clientes/clientes.php
 app/views/clientes/editar.php
 app/views/clientes/nuevo.php
 ```
+## Requisitos
+Los requisitos de funcionamiento de CodeIgniter son los siguientes:
 
+PHP version 7.4 o superior, con las siguienes extenxiones habilitadas:
+
+- intl
+- libcurl (si planea utilizar la librería HTTP\CURLRequest)
+- mbstring
+
+Adicionalmente, asegúrese de que las siguientes extenciones están habilitadas en su PHP:
+- json (habilitada por defecto - NO la desactive)
+- xml (habilitada por defecto - NO la desactive))
+- mysqlnd
 
 ## Instalación
+- Para la instalación se requiere un servidor web apache con PHP versión 7.4 o superior y mysql. 
 - Descargue el repositorio y ubíquelo dentro de en un folder en la raíz de su servidor.
 - Cree una base de datos MySQL.
 - Importe en mysql el archivo **db/starterci4.sql**.
