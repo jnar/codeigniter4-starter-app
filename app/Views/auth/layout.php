@@ -18,6 +18,7 @@
     <!-- iCheck -->
     <link rel="stylesheet" href="<?= base_url('assets/plugins/iCheck/square/blue.css'); ?>">
 
+
     <?= $this->renderSection('pageStyles') ?>
     <!-- jQuery 3 -->
     <script src="<?= base_url('bower_components/jquery/dist/jquery.min.js'); ?>"></script>
